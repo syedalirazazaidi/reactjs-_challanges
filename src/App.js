@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// function App() {
+//   return <div>hi</div>;
+// }
 
-function App() {
+// export default App;
+
+import React, { useState } from "react";
+import Question from "./Question";
+
+const App = () => {
+  const [question, setAnswer] = useState({
+    question: "what is your name",
+    name: "my name is ali raza",
+  });
+  const handleChange = (e) => {
+    setAnswer((prevState) => ({
+      ...prevState,
+      question: question.name,
+    }));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={handleChange}> {question.question}</button>
     </div>
   );
-}
+};
 
 export default App;
