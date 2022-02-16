@@ -1,12 +1,13 @@
 import React from "react";
 import Body from "./body";
-import Head from "./heading";
-import "./style.css";
+import NavBar from "./components/navbar";
+import Main from "./components/newapp";
+// import "./style.css";
 const Project1 = () => {
   return (
     <div>
-      <Head />
-      <Body />
+      <NavBar />
+      <Main />
     </div>
   );
 };
