@@ -14,6 +14,7 @@ const Main = () => {
       <div
         style={{
           display: "flex",
+          flexWrap: "wrap",
           margin: "0 auto",
           width: "436px",
         }}
@@ -30,12 +31,24 @@ const Main = () => {
         />
       </div>
       <button
-        style={{ margin: "0px 530px", width: "384px", padding: "10px" }}
+        style={{
+          margin: "0px 530px",
+          width: "384px",
+          padding: "10px",
+          flexWrap: "wrap",
+        }}
         onClick={randomData}
       >
         Get a new meme image 🖼
       </button>
-      <img src={img} />
+      {img ? (
+        <img
+          src={img}
+          style={{ width: "350px", height: "300px", margin: "70px 540px" }}
+        />
+      ) : (
+        "click button"
+      )}
     </main>
   );
 };
