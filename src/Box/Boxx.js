@@ -3,7 +3,12 @@ import "./styles.css";
 const Boxx = (props) => {
   const style = { backgroundColor: props.on ? "black" : "grey" };
 
-  return <div style={style} className="box" onClick={props.toggle}></div>;
+  return (
+    <div style={style} className="box" onClick={props.toggle}>
+      {" "}
+      click to change
+    </div>
+  );
 };
 
 export default Boxx;
