@@ -6,6 +6,7 @@ const Boxx = (props) => {
   return (
     <div style={style} className="box" onClick={props.toggle}>
       {" "}
+      {window.innerWidth}
       click to change
     </div>
   );
